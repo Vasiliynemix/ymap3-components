@@ -1,22 +1,20 @@
 import { Reactify } from "@yandex/ymaps3-types/reactify";
 
-// @yandex/ymaps3-cartesian-projection@0.0.1 - Projection package cartesian-projection
-// @yandex/ymaps3-clusterer@0.0.1 - Clusterer
-// @yandex/ymaps3-controls@0.0.1 - Control Package
-// @yandex/ymaps3-hint@0.0.1 - Hints Package
-// @yandex/ymaps3-markers@0.0.1 - Default Marker Pack
-// @yandex/ymaps3-spherical-mercator-projection@0.0.1 - Projection package spherical-mercator-projection
+// Новые версии пакетов и сохранение структуры
 export enum Package {
-  CartesianProjection = "@yandex/ymaps3-cartesian-projection@0.0.1",
-  Clusterer = "@yandex/ymaps3-clusterer@0.0.1",
-  Controls = "@yandex/ymaps3-controls@0.0.1",
-  Hint = "@yandex/ymaps3-hint@0.0.1",
-  Markers = "@yandex/ymaps3-markers@0.0.1",
-  SphericalMercatorProjection = "@yandex/ymaps3-spherical-mercator-projection@0.0.1",
+  CartesianProjection = "@yandex/ymaps3-cartesian-projection@0.0.6",
+  Clusterer = "@yandex/ymaps3-clusterer@0.0.12",
+  Hint = "@yandex/ymaps3-default-ui-theme",       // Hint теперь внутри DefaultUITheme
+  Controls = "@yandex/ymaps3-default-ui-theme",   // Controls внутри DefaultUITheme
+  Markers = "@yandex/ymaps3-default-ui-theme",    // Markers внутри DefaultUITheme
 }
+
+// Типы YMaps
 export type YMapsV3 = typeof import("@yandex/ymaps3-types/index");
+
 export interface YMapDefaultModules {
   reactify: Reactify;
   ymaps: YMapsV3;
 }
+
 export interface YMapsComponentsState extends YMapDefaultModules {}

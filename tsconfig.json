@@ -1,16 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "esnext",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
     "jsx": "react",
-    "module": "ESNext",
+    "module": "Node16",
     "declaration": true,
     "sourceMap": true,
     "outDir": "dist",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "allowSyntheticDefaultImports": true,
     "emitDeclarationOnly": true
   }
